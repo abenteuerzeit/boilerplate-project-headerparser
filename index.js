@@ -14,6 +14,13 @@ app.get('/api/hello', (req, res) => {
   res.json({ greeting: 'hello API' });
 });
 
+/** 
+A request to /api/whoami should return 
+- a JSON object with your IP address in the ipaddress key.
+- a JSON object with your preferred language in the language key.
+- a JSON object with your software in the software key.
+*/
+
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port);
 });
